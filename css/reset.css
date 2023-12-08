@@ -1,0 +1,18 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+a:link, 
+a:visited,
+a:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,160 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&family=Roboto:wght@300;400;700&family=Yellowtail&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 300px 56px;
+    height: 210px;
+    width: 970px;
+    background: linear-gradient(92deg, #74EBD5 0%, #ACB6E5 100%);
+}
+
+.title {
+    margin-bottom: 21px;
+    color: #353845;
+    font-size: 30px;
+    font-weight: 700;
+    }
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    width: 466px;
+    height: 50px;
+    border-radius: 7px;
+    background: #FFF;   
+}
+
+.input {
+    padding: 16px;
+    color: #646060;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 7px;
+    outline: none;
+}
+
+::placeholder {
+    color: #C8BFBF;
+    font-weight: 300;
+  }
+
+.btn {
+    background: #D7E8E6;
+    width: 130px;
+    color: #646060;
+    border-radius: 0px 7px 7px 0px;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    transition: background 0.2s ease-in;
+}
+
+.btn:hover {
+    background: #74EBD5 ;
+    color: #ffffff;
+}
+
+main {
+    height: calc(100vh - 245px);
+    width: 970px;
+    background-color: #ffffff;
+    box-shadow: 0px 11px 40px 0px #BCBFC2;
+}
+
+.card::before {
+    content: '';
+
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 230px;
+    left: 10px;
+    bottom: -12px;
+    z-index: -1;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 11px 40px 0px #BCBFC2;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    padding: 32px 18px 42px 33px;
+    /* margin-top: 72px; */
+    margin: 72px auto 119px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 11px 40px 0px #BCBFC2;
+}
+.card-city {
+    color: #353845;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.card-city span {
+    display: inline-block;
+    background: #C5DBD8;
+    padding: 2px 4px;
+    vertical-align: middle;
+    border-radius: 7px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.card-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-value {
+    color: #000;
+    font-size: 65px;
+    font-weight: 500;
+}
+
+.card-value sup {
+    font-size: 50%;
+    font-weight: 700;
+}
+
+.card-description {
+    color: #353845;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer {
+    margin-top: auto;
+    width: 970px;
+    height: 35px;
+    padding: 8px 15px;
+    margin-top: auto;
+    background-color: #E4EAEA;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.footer a {
+    color: #646060;
+}
