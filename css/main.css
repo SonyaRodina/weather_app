@@ -71,6 +71,9 @@ html, body {
 }
 
 main {
+    position: absolute;
+    z-index: -1;
+    margin-top: 210px;
     height: calc(100vh - 245px);
     width: 970px;
     background-color: #ffffff;
