@@ -85,7 +85,7 @@ main {
 
     position: absolute;
     width: calc(100% - 20px);
-    height: 230px;
+    height: 100px;
     left: 10px;
     bottom: -12px;
     z-index: -1;
