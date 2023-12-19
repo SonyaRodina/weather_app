@@ -1,3 +1,6 @@
+import conditions from '../conditions.js';
+console.log(conditions);
+
 const apiKey = 'be9bf39af00c4120a1c152327230912';
 
 const form = document.querySelector('#form');
@@ -46,12 +49,15 @@ form.onsubmit = async function(e) {
             removeCard(); 
             showError(data.error.message);
         } else {                                                           
-            removeCard();                                
+            removeCard();    
+            console.log(data.current.condition.code)
+            const info = conditions.find((obj) => obj.code === data.current.condition.code);
+            const condition = data.current.is_day ? info.languages[23]['day_text'] : info.languages[23]['night_text'];
             showCard(
                 data.location.name,
                 data.location.country,
                 data.current.temp_c,
-                data.current.condition.text
+                condition
             );
         }
     }
