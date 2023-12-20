@@ -140,6 +140,10 @@ main {
     font-weight: 700;
 }
 
+.card-img {
+    width: 120px;
+}
+
 .card-description {
     color: #353845;
     font-size: 20px;

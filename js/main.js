@@ -18,13 +18,12 @@ function showError(errorMessage) {
     main.insertAdjacentHTML('afterbegin', html);
 }
 
-function showCard(name, country, temp, condition) {             
-     // разметка для карточки с полученными данными
+function showCard(name, country, temp, condition, img) {             
     const html = `<div class="card">                              
                 <h2 class="card-city">${name} <span>${country}</span></h2> 
                 <div class="card-weather">
                     <div class="card-value">${temp}<sup>°c</sup></div>
-                    <img class="card-img" src="./img/example.svg" alt="Weather"></img>
+                    <img class="card-img" src="${img}"></img>
                 </div>
                 <div class="card-description">${condition}</div>
             </div>`
@@ -50,20 +49,22 @@ form.onsubmit = async function(e) {
             showError(data.error.message);
         } else {                                                           
             removeCard();    
-            console.log(data.current.condition.code)
+           
             const info = conditions.find((obj) => obj.code === data.current.condition.code);
+            console.log(info);
             const condition = data.current.is_day ? info.languages[23]['day_text'] : info.languages[23]['night_text'];
+
+            const filePath = './img/' + (data.current.is_day ? 'day' : 'night') + '/';
+            const fileName = (data.current.is_day ? info.day : info.night) + '.png';
+            const imgPath = filePath + fileName;
+            console.log('filePath', filePath + fileName);
+
             showCard(
                 data.location.name,
                 data.location.country,
                 data.current.temp_c,
-                condition
+                condition,
+                imgPath
             );
         }
     }
-
-
-
-
-
-// data.error.message
